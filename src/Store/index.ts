@@ -11,6 +11,7 @@ const counterReducer = (state = {counter: 0}, action: {type: string}) => {
             counter: state.counter -1
         }
     }
+    return state;
 }
 
 const store = createStore()
