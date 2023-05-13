@@ -1,5 +1,5 @@
 import classes from './Counter.module.css';
-import { useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 
 const Counter = () => {
@@ -7,21 +7,21 @@ const Counter = () => {
   const counter = useSelector((state: any) => state.counter);
 
   const toggleCounterHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-    
+
     const incrementHandler = () => {
-      dispatch({type: "increment"})
+      dispatch({ type: "increment" })
     }
     const decrementHandler = () => {
-      dispatch({type: "decrement"})
+      dispatch({ type: "decrement" })
     }
-    
-    if(e.currentTarget.value === "increment") {
+
+    if (e.currentTarget.value === "increment") {
       incrementHandler()
     }
-    if(e.currentTarget.value === "decrement") {
+    if (e.currentTarget.value === "decrement") {
       decrementHandler()
     }
-   
+
   };
 
   return (
