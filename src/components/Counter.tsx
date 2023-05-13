@@ -32,8 +32,10 @@ const Counter = () => {
 };
 
 class Counter extends Component {
-  incrementHandler() {}
-  decrementHandler() {}
+  incrementHandler() {
+    this.props.increment()
+  }
+  decrementHandler() {this.props.decrement()}
   toggleCounterHandler() {}
 
 
