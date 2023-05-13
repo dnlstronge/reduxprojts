@@ -16,4 +16,4 @@ const counterReducer = (state = {counter: 0}, action: {type: string}) => {
 
 const store = createStore(counterReducer)
 
-export default counterReducer;
+export default store;
