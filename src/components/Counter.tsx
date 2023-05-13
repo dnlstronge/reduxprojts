@@ -6,21 +6,14 @@ const Counter = () => {
   const dispatch = useDispatch()
   const counter = useSelector((state: any) => state.counter);
 
+  const incrementHandler = () => {
+    dispatch({ type: "increment" })
+  }
+  const decrementHandler = () => {
+    dispatch({ type: "decrement" })
+  }
+
   const toggleCounterHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-
-    const incrementHandler = () => {
-      dispatch({ type: "increment" })
-    }
-    const decrementHandler = () => {
-      dispatch({ type: "decrement" })
-    }
-
-    if (e.currentTarget.value === "increment") {
-      incrementHandler()
-    }
-    if (e.currentTarget.value === "decrement") {
-      decrementHandler()
-    }
 
   };
 
@@ -29,8 +22,8 @@ const Counter = () => {
       <h1>Redux Counter</h1>
       <div className={classes.value}>{counter}</div>
       <div>
-        <button onClick={toggleCounterHandler} value="increment">+</button>
-        <button onClick={toggleCounterHandler} value="decrement">-</button>
+        <button onClick={incrementHandler} value="increment">+</button>
+        <button onClick={decrementHandler} value="decrement">-</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
     </main>
