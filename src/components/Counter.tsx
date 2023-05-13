@@ -1,5 +1,6 @@
 import classes from './Counter.module.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch, connect} from 'react-redux';
+import { Component } from 'react';
 
 
 const Counter = () => {
@@ -30,4 +31,23 @@ const Counter = () => {
   );
 };
 
-export default Counter;
+class Counter extends Component {
+  incrementHandler() {}
+  decrementHandler() {}
+  toggleCounterHandler() {}
+
+
+  render() {
+    return (<main className={classes.counter}>
+      <h1>Redux Counter</h1>
+      <div className={classes.value}>{counter}</div>
+      <div>
+        <button onClick={this.incrementHandler} value="increment">+</button>
+        <button onClick={this.decrementHandler} value="decrement">-</button>
+      </div>
+      <button onClick={this.toggleCounterHandler}>Toggle Counter</button>
+    </main>)
+  }
+}
+
+export default connect() (Counter);
