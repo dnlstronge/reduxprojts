@@ -12,6 +12,7 @@ const counterReducer = (state = {counter: 0}, action: {type: string, payload: nu
         }
     }
     if(action.type === "plusFive") {
+        
         return {
             counter: state.counter + action.payload
         }
