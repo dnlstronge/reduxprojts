@@ -1,6 +1,12 @@
 import { createStore } from "redux";
 
-const counterReducer = (state = {counter: 0, showCounter: false}, action: {type: string, payload: number}) => {
+type initS = {
+    counter: number,
+    showCounter: boolean
+}
+
+const intitialState: initS = {counter: 0, showCounter: false }
+const counterReducer = (state = intitialState, action: {type: string, payload: number}) => {
 
     if(action.type === "showCounter") {
         return {
