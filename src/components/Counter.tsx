@@ -4,10 +4,12 @@ import { useSelector, useDispatch } from 'react-redux';
 
 
 const Counter = () => {
+
   const dispatch = useDispatch()
   const counter = useSelector((state: any) => state.counter);
   const showCounter = useSelector((state: any) => state.showCounter)
 
+  /* handlers */
   const incrementHandler = () => {
     dispatch({ type: "increment" })
   }
