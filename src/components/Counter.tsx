@@ -13,8 +13,8 @@ const Counter = () => {
   const decrementHandler = () => {
     dispatch({ type: "decrement" })
   }
-  const plusFiveHandler = () => {
-    dispatch({type: "plusFive", payload: 5})
+  const increaseHandler= () => {
+    dispatch({type: "increase", payload: 10})
   }
 
   const toggleCounterHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -28,7 +28,7 @@ const Counter = () => {
       <div>
         <button onClick={incrementHandler} value="increment">+</button>
         <button onClick={decrementHandler} value="decrement">-</button>
-        <button onClick={plusFiveHandler} value="decrement">+5</button>
+        <button onClick={increaseHandler} >+10</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
     </main>
