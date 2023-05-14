@@ -14,7 +14,7 @@ const Counter = () => {
     dispatch({ type: "decrement" })
   }
   const plusFiveHandler = () => {
-    
+    dispatch({type: "addFive", payload: 5})
   }
 
   const toggleCounterHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
