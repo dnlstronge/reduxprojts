@@ -6,6 +6,7 @@ type initS = {
 }
 
 const intitialState: initS = {counter: 0, showCounter: false }
+
 const counterReducer = (state = intitialState, action: {type: string, payload: number}) => {
 
     if(action.type === "showCounter") {
@@ -19,6 +20,8 @@ const counterReducer = (state = intitialState, action: {type: string, payload: n
             counter: state.counter + 1,
             showCounter: true
 
+            
+            
         }
     }
     if(action.type === "decrement") {
