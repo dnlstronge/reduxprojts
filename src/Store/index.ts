@@ -1,6 +1,6 @@
 import { createStore } from "redux";
 
-type initS = {
+export type initS = {
     counter: number,
     showCounter: boolean
 }
