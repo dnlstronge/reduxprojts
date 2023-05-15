@@ -10,7 +10,7 @@ export type initS = {
 
 const intitialState: initS = {counter: 0, showCounter: false }
 
-createSlice({
+const counterSlice = createSlice({
     name: "counter",
     initialState: intitialState,
     reducers: {
@@ -23,7 +23,9 @@ createSlice({
         increase(state, action){
             state.counter = state.counter + action.payload
         },
-        toggleCounter(){}
+        toggleCounter(state){
+            state.showCounter = !state.showCounter
+        }
         }
 })
 
