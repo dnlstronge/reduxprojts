@@ -1,6 +1,6 @@
-import { createStore } from "redux";
-import { createSlice } from "@reduxjs/toolkit"
-import { create } from "domain";
+
+import { createSlice, configureStore } from "@reduxjs/toolkit"
+
 
 
 export type initS = {
@@ -31,6 +31,8 @@ const counterSlice = createSlice({
 
 
 
-const store = createStore(counterReducer)
+const store = configureStore({
+    reducer: {counter: counterSlice.reducer}
+})
 
 export default store;
