@@ -1,4 +1,7 @@
 import { createStore } from "redux";
+import { createSlice } from "@reduxjs/toolkit"
+import { create } from "domain";
+
 
 export type initS = {
     counter: number,
@@ -6,6 +9,16 @@ export type initS = {
 }
 
 const intitialState: initS = {counter: 0, showCounter: false }
+
+createSlice({
+    name: "counter",
+    initialState: intitialState,
+    reducers: {
+        increment(){},
+        decrement(){},
+        increase(){}
+    }
+})
 
 const counterReducer = (state = intitialState, action: {type: string, payload: number}) => {
 
