@@ -15,14 +15,14 @@ const Counter = () => {
     dispatch(counterActions.increment())
   }
   const decrementHandler = () => {
-    dispatch({ type: "decrement" })
+    dispatch(counterActions.decrement())
   }
   const increaseHandler = () => {
-    dispatch({ type: "increase", payload: 10 })
+    dispatch(counterActions.increase(10))
   }
 
   const toggleCounterHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-    dispatch({ type: "showCounter" })
+    dispatch(counterActions.toggleCounter())
   };
 
   return (
