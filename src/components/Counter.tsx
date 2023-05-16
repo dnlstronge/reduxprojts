@@ -12,7 +12,7 @@ const Counter = () => {
 
   /* handlers */
   const incrementHandler = () => {
-    dispatch({ type: "increment" })
+    dispatch(counterActions.increment())
   }
   const decrementHandler = () => {
     dispatch({ type: "decrement" })
