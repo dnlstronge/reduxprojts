@@ -1,8 +1,6 @@
 
 import { createSlice, configureStore } from "@reduxjs/toolkit"
 
-
-
 export type initS = {
     counter: number,
     showCounter: boolean
