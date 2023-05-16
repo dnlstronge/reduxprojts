@@ -18,7 +18,7 @@ const Counter = () => {
     dispatch(counterActions.decrement())
   }
   const increaseHandler = () => {
-    dispatch(counterActions.increase(10))
+    dispatch(counterActions.increase(10)) /* type: UNIQUE IDENTIFIER, payload: VALUE */
   }
 
   const toggleCounterHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
