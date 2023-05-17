@@ -1,9 +1,20 @@
 import classes from './Header.module.css';
 
+
+type storeState = {
+  counter: initS,
+  auth: initA
+}
+
+
 const Header = () => {
+
+
   return (
     <header className={classes.header}>
       <h1>Redux Auth</h1>
+
+
       <nav>
         <ul>
           <li>

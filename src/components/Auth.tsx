@@ -1,14 +1,17 @@
 import classes from './Auth.module.css';
 import React, { FormEvent } from "react";
-import { initA } from '../Store';
+import { initA, initS } from '../Store';
 import { authActions } from '../Store';
 import { useSelector, useDispatch } from 'react-redux';
 
-
+type storeState = {
+  counter: initS,
+  auth: initA
+}
 
 const Auth: React.FC = () => {
   const dispatch = useDispatch()
-  const isAuth = useSelector((state: initA) => state.isAuthenticated)
+  const isAuth = useSelector((state: storeState) => state.auth.isAuthenticated)
 
   /* handlers */
 
@@ -32,8 +35,7 @@ const Auth: React.FC = () => {
           <button type="submit">Login</button>
         </form>
       </section>
-      {!isAuth && 
-      <div>TESTING CONDITIONALITY</div>}
+
     </main>
   );
 };
