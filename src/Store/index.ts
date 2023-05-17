@@ -6,11 +6,16 @@ export type initS = {
     showCounter: boolean
 }
 
-const intitialState: initS = {counter: 0, showCounter: false }
+
+
+
+
+
+const intitialCounterState: initS = {counter: 0, showCounter: false }
 
 const counterSlice = createSlice({
     name: "counter",
-    initialState: intitialState,
+    initialState: intitialCounterState,
     reducers: {
         increment(state){
             state.counter ++
