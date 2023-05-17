@@ -1,6 +1,6 @@
 
 import { configureStore } from "@reduxjs/toolkit"
-import counterSlice from "./counter-slice"
+import counterSliceReducer from "./counter-slice"
 import authSlice from "./auth-slice"
 
 /* Types */
@@ -14,16 +14,14 @@ export type initA = {
 }
 
 
-/* Actions */
 
-export const counterActions = counterSlice.actions
 export const authActions = authSlice.actions
 
 /* Store */
 
 const store = configureStore({
     reducer: {
-        counter: counterSlice.reducer,
+        counter: counterSliceReducer,
         auth: authSlice.reducer
         },
 })
