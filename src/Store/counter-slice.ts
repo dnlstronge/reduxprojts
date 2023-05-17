@@ -1,10 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { initA, initS } from "."
-
-type storeState = {
-    counter: initS,
-    auth: initA
-  }
+import { initS } from "."
 
 
 const intitialCounterState: initS = {counter: 0, showCounter: false }

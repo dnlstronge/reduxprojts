@@ -16,8 +16,6 @@ export type initA = {
 export const counterActions = counterSlice.actions
 export const authActions = authSlice.actions
 
-
-// guess this is where the problem is => 
 const store = configureStore({
     reducer: {
         counter: counterSlice.reducer,
