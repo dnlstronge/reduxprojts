@@ -14,7 +14,7 @@ const Auth: React.FC = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    dispatch(authActions.setIsAuthenticated())
+    dispatch(authActions.login())
   }
 
   return (
