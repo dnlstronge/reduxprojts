@@ -1,5 +1,6 @@
 import classes from './Header.module.css';
-
+import { useSelector } from "react-redux"
+import { initA, initS } from '../Store';
 
 type storeState = {
   counter: initS,
