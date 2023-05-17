@@ -5,13 +5,13 @@ export type initS = {
     counter: number,
     showCounter: boolean
 }
+export type initA = {
+    isAuthenticated: boolean
+}
 
-
-
-
-
-
+/*Initial states */
 const intitialCounterState: initS = {counter: 0, showCounter: false }
+const initialAuthState: 
 
 const counterSlice = createSlice({
     name: "counter",
@@ -30,6 +30,11 @@ const counterSlice = createSlice({
             state.showCounter = !state.showCounter
         }
         }
+})
+
+const authSlice = createSlice({
+    name: "authenication",
+    initialState: 
 })
 
 export const counterActions = counterSlice.actions
