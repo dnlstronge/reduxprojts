@@ -10,12 +10,16 @@ const Auth: React.FC = () => {
   const dispatch = useDispatch()
   const isAuth = useSelector((state: initA) => state.isAuthenticated)
 
-  /* Su */
+  /* handlers */
+
+  const handleSubmit = () => {
+    authActions.setIsAuthenticated()
+  }
 
   return (
     <main className={classes.auth}>
       <section>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className={classes.control}>
             <label htmlFor='email'>Email</label>
             <input type='email' id='email' />
@@ -24,9 +28,10 @@ const Auth: React.FC = () => {
             <label htmlFor='password'>Password</label>
             <input type='password' id='password' />
           </div>
-          <button>Login</button>
+          <button type="submit">Login</button>
         </form>
       </section>
+      <div>TESTING CONDITIONALITY</div>
     </main>
   );
 };
