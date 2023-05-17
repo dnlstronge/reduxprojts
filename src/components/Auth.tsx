@@ -1,7 +1,17 @@
 import classes from './Auth.module.css';
 import React from "react";
+import { initA } from '../Store';
+import { authActions } from '../Store';
+import { useSelector, useDispatch } from 'react-redux';
+
+
 
 const Auth: React.FC = () => {
+  const dispatch = useDispatch()
+  const isAuth = useSelector((state: initA) => state.isAuthenticated)
+
+  /* Su */
+
   return (
     <main className={classes.auth}>
       <section>
