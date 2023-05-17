@@ -1,6 +1,7 @@
 
 import { createSlice, configureStore } from "@reduxjs/toolkit"
 import counterSlice from "./counter-slice"
+import authSlice from "./auth-slice"
 
 export type initS = {
     counter: number,
@@ -9,24 +10,6 @@ export type initS = {
 export type initA = {
     isAuthenticated: boolean
 }
-
-
-const initialAuthState: initA = {isAuthenticated: false}
-
-
-
-const authSlice = createSlice({
-    name: "authenication",
-    initialState: initialAuthState,
-    reducers: {
-        login(state) {
-            state.isAuthenticated = true
-        },
-        logout(state) {
-            state.isAuthenticated = false
-        }
-    }
-})
 
 
 /* Actions */
