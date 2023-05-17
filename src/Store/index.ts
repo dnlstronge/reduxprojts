@@ -11,7 +11,7 @@ export type initA = {
 
 /*Initial states */
 const intitialCounterState: initS = {counter: 0, showCounter: false }
-const initialAuthState: 
+const initialAuthState: initA = {isAuthenticated: false}
 
 const counterSlice = createSlice({
     name: "counter",
@@ -34,7 +34,8 @@ const counterSlice = createSlice({
 
 const authSlice = createSlice({
     name: "authenication",
-    initialState: 
+    initialState: initialAuthState,
+    reducers: {}
 })
 
 export const counterActions = counterSlice.actions
