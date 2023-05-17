@@ -20,6 +20,7 @@ export const counterActions = counterSlice.actions
 export const authActions = authSlice.actions
 
 /* Store */
+
 const store = configureStore({
     reducer: {
         counter: counterSlice.reducer,
