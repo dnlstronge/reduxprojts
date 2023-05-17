@@ -35,10 +35,17 @@ const counterSlice = createSlice({
 const authSlice = createSlice({
     name: "authenication",
     initialState: initialAuthState,
-    reducers: {}
+    reducers: {
+        setIsAuthenticated(state) {
+            state.isAuthenticated = true
+        }
+    }
 })
 
+
+/* Actions */
 export const counterActions = counterSlice.actions
+export const authActions = authSlice.actions
 
 const store = configureStore({
     reducer: counterSlice.reducer
