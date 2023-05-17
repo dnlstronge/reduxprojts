@@ -1,7 +1,7 @@
 import classes from './Header.module.css';
 import { useSelector, useDispatch } from "react-redux"
 import { initA, initS } from '../Store';
-import { authActions } from '../Store';
+import { authActions } from '../Store/auth-slice'
 
 type storeState = {
   counter: initS,

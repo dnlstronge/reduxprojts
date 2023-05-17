@@ -1,7 +1,7 @@
 import classes from './Auth.module.css';
 import React, { FormEvent } from "react";
 import { initA, initS } from '../Store';
-import { authActions } from '../Store';
+import { authActions } from '../Store/auth-slice';
 import { useSelector, useDispatch } from 'react-redux';
 
 type storeState = {
@@ -11,7 +11,7 @@ type storeState = {
 
 const Auth: React.FC = () => {
   const dispatch = useDispatch()
-  const isAuth = useSelector((state: storeState) => state.auth.isAuthenticated)
+  
 
   /* handlers */
 
