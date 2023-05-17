@@ -37,8 +37,7 @@ const authSlice = createSlice({
     initialState: initialAuthState,
     reducers: {
         setIsAuthenticated(state) {
-            console.log("is this even firing")
-            state.isAuthenticated = !state.isAuthenticated
+            state.isAuthenticated = true
         }
     }
 })
@@ -48,8 +47,10 @@ const authSlice = createSlice({
 export const counterActions = counterSlice.actions
 export const authActions = authSlice.actions
 
+
+// guess this is where the problem is => 
 const store = configureStore({
-    reducer: counterSlice.reducer
+    reducer: counterSlice.reducer,
 })
 
 export default store;

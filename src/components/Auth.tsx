@@ -14,7 +14,6 @@ const Auth: React.FC = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    console.log("floogity boogity!!!")
     dispatch(authActions.setIsAuthenticated())
   }
 
@@ -33,7 +32,7 @@ const Auth: React.FC = () => {
           <button type="submit">Login</button>
         </form>
       </section>
-      {isAuth && 
+      {!isAuth && 
       <div>TESTING CONDITIONALITY</div>}
     </main>
   );
