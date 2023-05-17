@@ -1,5 +1,5 @@
 import classes from './Auth.module.css';
-import React from "react";
+import React, { FormEvent } from "react";
 import { initA } from '../Store';
 import { authActions } from '../Store';
 import { useSelector, useDispatch } from 'react-redux';
@@ -12,8 +12,10 @@ const Auth: React.FC = () => {
 
   /* handlers */
 
-  const handleSubmit = () => {
-    authActions.setIsAuthenticated()
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault()
+    console.log("floogity boogity!!!")
+    dispatch(authActions.setIsAuthenticated())
   }
 
   return (
@@ -31,7 +33,8 @@ const Auth: React.FC = () => {
           <button type="submit">Login</button>
         </form>
       </section>
-      <div>TESTING CONDITIONALITY</div>
+      {isAuth && 
+      <div>TESTING CONDITIONALITY</div>}
     </main>
   );
 };

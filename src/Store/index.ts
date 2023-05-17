@@ -37,7 +37,8 @@ const authSlice = createSlice({
     initialState: initialAuthState,
     reducers: {
         setIsAuthenticated(state) {
-            state.isAuthenticated = true
+            console.log("is this even firing")
+            state.isAuthenticated = !state.isAuthenticated
         }
     }
 })
