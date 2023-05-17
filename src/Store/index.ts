@@ -38,6 +38,9 @@ const authSlice = createSlice({
     reducers: {
         setIsAuthenticated(state) {
             state.isAuthenticated = true
+        },
+        setNotAuthenticated(state) {
+            state.isAuthenticated = false
         }
     }
 })
